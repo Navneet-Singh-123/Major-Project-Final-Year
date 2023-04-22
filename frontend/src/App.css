@@ -40,3 +40,8 @@
   background-color: rgb(209, 209, 209);
   transition: 1s background ease;
 }
+
+.imgs-desc {
+  font-size: 2rem;
+  padding-left: 1rem;
+}
