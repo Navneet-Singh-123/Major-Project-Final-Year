@@ -12,7 +12,7 @@ const App = () => {
 
   const submit = (e) => {
     e.preventDefault();
-    console.log(data);
+    // const dir_name = stockname + "#" + startdate + "#" + enddate;
   };
 
   const updateForm = (e) => {
