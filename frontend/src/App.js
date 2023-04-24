@@ -164,27 +164,21 @@ const App = () => {
       return;
     }
 
-    const res5 = await axios.post(
-      "http://localhost:8000/stocks/dt/stock_data",
-      {
-        dirName: dir,
-      }
-    );
+    const res5 = await axios.post("/stocks/dt/stock_data", {
+      dirName: dir,
+    });
     setDTStockDataImgs((dt_stockDataImgs) => [...dt_stockDataImgs, res5.data]);
 
-    const res6 = await axios.post(
-      "http://localhost:8000/stocks/dt/twitter_sentiments",
-      {
-        dirName: dir,
-      }
-    );
+    const res6 = await axios.post("/stocks/dt/twitter_sentiments", {
+      dirName: dir,
+    });
     setDTTwitterSentimentsImgs((dt_twitterSentimentsImgs) => [
       ...dt_twitterSentimentsImgs,
       res6.data,
     ]);
 
     const res7 = await axios.post(
-      "http://localhost:8000/stocks/dt/stock_data_and_twitter_sentiments",
+      "/stocks/dt/stock_data_and_twitter_sentiments",
       {
         dirName: dir,
       }
@@ -206,30 +200,24 @@ const App = () => {
       return;
     }
 
-    const res1 = await axios.post(
-      "http://localhost:8000/stocks/bilstm/stock_data",
-      {
-        dirName: dir,
-      }
-    );
+    const res1 = await axios.post("/stocks/bilstm/stock_data", {
+      dirName: dir,
+    });
     setBILSTMStockDataImgs((BILSTM_stockDataImgs) => [
       ...BILSTM_stockDataImgs,
       res1.data,
     ]);
 
-    const res2 = await axios.post(
-      "http://localhost:8000/stocks/bilstm/twitter_sentiments",
-      {
-        dirName: dir,
-      }
-    );
+    const res2 = await axios.post("/stocks/bilstm/twitter_sentiments", {
+      dirName: dir,
+    });
     setBILSTMTwitterSentimentsImgs((BILSTM_twitterSentimentsImgs) => [
       ...BILSTM_twitterSentimentsImgs,
       res2.data,
     ]);
 
     const res3 = await axios.post(
-      "http://localhost:8000/stocks/bilstm/stock_data_and_twitter_sentiments",
+      "/stocks/bilstm/stock_data_and_twitter_sentiments",
       {
         dirName: dir,
       }
@@ -241,12 +229,9 @@ const App = () => {
       ]
     );
 
-    const res4 = await axios.post(
-      "http://localhost:8000/stocks/bilstm/testing_results",
-      {
-        dirName: dir,
-      }
-    );
+    const res4 = await axios.post("/stocks/bilstm/testing_results", {
+      dirName: dir,
+    });
     setBILSTMTestingResults((BILSTM_testingResults) => [
       ...BILSTM_testingResults,
       res4.data,
@@ -262,30 +247,24 @@ const App = () => {
       return;
     }
 
-    const res1 = await axios.post(
-      "http://localhost:8000/stocks/rnn/stock_data",
-      {
-        dirName: dir,
-      }
-    );
+    const res1 = await axios.post("/stocks/rnn/stock_data", {
+      dirName: dir,
+    });
     setRNNStockDataImgs((rnn_stockDataImgs) => [
       ...rnn_stockDataImgs,
       res1.data,
     ]);
 
-    const res2 = await axios.post(
-      "http://localhost:8000/stocks/rnn/twitter_sentiments",
-      {
-        dirName: dir,
-      }
-    );
+    const res2 = await axios.post("/stocks/rnn/twitter_sentiments", {
+      dirName: dir,
+    });
     setRNNTwitterSentimentsImgs((rnn_twitterSentimentsImgs) => [
       ...rnn_twitterSentimentsImgs,
       res2.data,
     ]);
 
     const res3 = await axios.post(
-      "http://localhost:8000/stocks/rnn/stock_data_and_twitter_sentiments",
+      "/stocks/rnn/stock_data_and_twitter_sentiments",
       {
         dirName: dir,
       }
@@ -297,12 +276,9 @@ const App = () => {
       ]
     );
 
-    const res4 = await axios.post(
-      "http://localhost:8000/stocks/rnn/testing_results",
-      {
-        dirName: dir,
-      }
-    );
+    const res4 = await axios.post("/stocks/rnn/testing_results", {
+      dirName: dir,
+    });
     setRNNTestingResults((rnn_testingResults) => [
       ...rnn_testingResults,
       res4.data,
@@ -318,30 +294,24 @@ const App = () => {
       return;
     }
 
-    const res1 = await axios.post(
-      "http://localhost:8000/stocks/gru/stock_data",
-      {
-        dirName: dir,
-      }
-    );
+    const res1 = await axios.post("/stocks/gru/stock_data", {
+      dirName: dir,
+    });
     setGRUStockDataImgs((GRU_stockDataImgs) => [
       ...GRU_stockDataImgs,
       res1.data,
     ]);
 
-    const res2 = await axios.post(
-      "http://localhost:8000/stocks/gru/twitter_sentiments",
-      {
-        dirName: dir,
-      }
-    );
+    const res2 = await axios.post("/stocks/gru/twitter_sentiments", {
+      dirName: dir,
+    });
     setGRUTwitterSentimentsImgs((GRU_twitterSentimentsImgs) => [
       ...GRU_twitterSentimentsImgs,
       res2.data,
     ]);
 
     const res3 = await axios.post(
-      "http://localhost:8000/stocks/gru/stock_data_and_twitter_sentiments",
+      "/stocks/gru/stock_data_and_twitter_sentiments",
       {
         dirName: dir,
       }
@@ -353,12 +323,9 @@ const App = () => {
       ]
     );
 
-    const res4 = await axios.post(
-      "http://localhost:8000/stocks/gru/testing_results",
-      {
-        dirName: dir,
-      }
-    );
+    const res4 = await axios.post("/stocks/gru/testing_results", {
+      dirName: dir,
+    });
     setGRUTestingResults((GRU_testingResults) => [
       ...GRU_testingResults,
       res4.data,
