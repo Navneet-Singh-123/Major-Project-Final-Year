@@ -123,28 +123,22 @@ const App = () => {
       return;
     }
 
-    const res1 = await axios.post("http://localhost:8000/stocks/stock_data", {
+    const res1 = await axios.post("/stocks/stock_data", {
       dirName: dir,
     });
     setStockDataImgs((stockDataImgs) => [...stockDataImgs, res1.data]);
 
-    const res2 = await axios.post(
-      "http://localhost:8000/stocks/twitter_sentiments",
-      {
-        dirName: dir,
-      }
-    );
+    const res2 = await axios.post("/stocks/twitter_sentiments", {
+      dirName: dir,
+    });
     setTwitterSentimentsImgs((twitterSentimentsImgs) => [
       ...twitterSentimentsImgs,
       res2.data,
     ]);
 
-    const res3 = await axios.post(
-      "http://localhost:8000/stocks/stock_data_and_twitter_sentiments",
-      {
-        dirName: dir,
-      }
-    );
+    const res3 = await axios.post("/stocks/stock_data_and_twitter_sentiments", {
+      dirName: dir,
+    });
     setStockDataAndTwitterSentimentsImgs(
       (stockDataAndTwitterSentimentsImgs) => [
         ...stockDataAndTwitterSentimentsImgs,
@@ -152,12 +146,9 @@ const App = () => {
       ]
     );
 
-    const res4 = await axios.post(
-      "http://localhost:8000/stocks/testing_results",
-      {
-        dirName: dir,
-      }
-    );
+    const res4 = await axios.post("/stocks/testing_results", {
+      dirName: dir,
+    });
     setTestingResultsImgs((testingResultsImgs) => [
       ...testingResultsImgs,
       res4.data,
