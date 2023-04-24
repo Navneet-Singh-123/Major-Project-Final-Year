@@ -9,6 +9,11 @@
   font-size: 4rem;
 }
 
+.sub-heading {
+  text-align: center;
+  font-size: 3rem;
+}
+
 .form-box {
   width: 50rem;
   margin: 0vw;
