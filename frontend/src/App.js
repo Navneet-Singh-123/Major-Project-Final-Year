@@ -395,9 +395,6 @@ const App = () => {
         <button className="form-btn" onClick={submitGRU}>
           GRU
         </button>
-        <button className="form-btn" onClick={submitRF}>
-          Random Forest
-        </button>
       </div>
 
       {stockDataImgs && stockDataImgs.length !== 0 && (
